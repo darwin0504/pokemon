@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { from } from 'rxjs';
 import { AuthorizationService } from '../../service/authorization.service';
 import { Router } from '@angular/router';
@@ -13,21 +13,25 @@ export class SignInComponent implements OnInit {
 
   public form: FormGroup;
 
-  constructor(private authorizationService: AuthorizationService, private router: Router) {
-    this.form = new FormGroup({
-      email: new FormControl(),
-      password: new FormControl()
+  constructor(private authorizationService: AuthorizationService, private router: Router, private formBuilder: FormBuilder) {
+    this.form = this.formBuilder.group({
+      email: new FormControl("", Validators.compose([Validators.required])),
+      password: new FormControl("", Validators.compose([Validators.required]))
     });
   }
 
   ngOnInit(): void { }
 
   register() {
-    this.authorizationService.signIn(this.form.value)
-      .then(response => {
-        this.router.navigate(["login"]);
-      })
-      .catch(error => { console.log(error) });
+    if (this.form.valid) {
+      this.authorizationService.signIn(this.form.value)
+        .then(response => {
+          this.router.navigate(["login"]);
+        })
+        .catch(error => { alert(error) });
+    } else {
+      alert("Faltan datos");
+    }
   }
 
   inLogIn() {

@@ -1,11 +1,14 @@
 <body>
-    <div class="card mb-3 position-absolute top-50 start-50 translate-middle size p-3 mb-2 bg-warning text-dark">
+    <div class="position-absolute top-0 start-50 translate-middle-x">
+        <img src="/assets/img/logo.png" width="250px">
+    </div>
+    <div class="card mb-3 position-absolute top-50 start-50 translate-middle size border border-warning">
         <div class="row g-0">
             <div class="col-md-4 position-absolute top-50 start-0 translate-middle-y"
                 style="text-align: center; position: relative;">
                 <img [src]="imgPokemon" class="img-fluid rounded-start" alt="">
             </div>
-            <h1><strong>{{detailPokemon.name.toUpperCase()}}</strong></h1>
+            <h1 style="margin-left: 10px;"><strong>{{detailPokemon.name.toUpperCase()}}</strong></h1>
             <div class="d-grid gap-2 d-md-block alignButton">
                 <button type="button" class="btn btn-danger position-absolute bottom-0 start-0"
                     (click)="inPokemon()">View all Pokemons</button>
@@ -14,9 +17,10 @@
                 <div class="card-body">
                     <img src="/src/assets/img/pokemon.jpg" alt="">
                     <div class="list-group">
-                        <a class="list-group-item list-group-item-action p-3 mb-2 bg-transparent text-dark">
+                        <a class="list-group-item list-group-item-action p-3 mb-2 bg-danger text-white">
                             <div class="d-flex w-100 justify-content-between">
-                                <h2 class="mb-1">Abilities</h2>
+                                <h2 class="mb-1"><u>Abilities</u></h2>
+                                <hr>
                             </div>
                             <div class="container align">
                                 <div class="row">
@@ -26,9 +30,9 @@
                                 </div>
                             </div>
                         </a>
-                        <a class="list-group-item list-group-item-action p-3 mb-2 bg-transparent text-dark">
+                        <a class="list-group-item list-group-item-action p-3 mb-2 bg-danger text-white">
                             <div class="d-flex w-100 justify-content-between">
-                                <h2 class="mb-1">Attributes</h2>
+                                <h2 class="mb-1"><u>Attributes</u></h2>
                             </div>
                             <div class="container align">
                                 <div class="row">
@@ -57,9 +61,9 @@
                                 </div>
                             </div>
                         </a>
-                        <a class="list-group-item list-group-item-action p-3 mb-2 bg-transparent text-dark">
+                        <a class="list-group-item list-group-item-action p-3 mb-2 bg-danger text-white">
                             <div class="d-flex w-100 justify-content-between">
-                                <h2 class="mb-1">Type</h2>
+                                <h2 class="mb-1"><u>Type</u></h2>
                             </div>
                             <div class="container align">
                                 <div class="row">

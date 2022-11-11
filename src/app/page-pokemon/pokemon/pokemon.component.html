@@ -1,30 +1,27 @@
 <body>
-    <button type="button" class="btn btn-primary" (click)="logout()">Logout</button>
-    <!-- <div class="container">
-        <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 position-absolute top-50 start-50 translate-middle"
-            style="text-align: center;">
-            <div class="col" *ngFor="let item of listPokemon.results;let index=index">
-                <div class="p-3 border bg-light">{{item.name}}
-                    <hr>
-                    <button type="button" class="btn btn-primary" (click)="routeDetailPokemon(index)">Ver</button>
+
+    <div class="position-absolute top-0 start-50 translate-middle-x">
+        <img src="/assets/img/logo.png" width="250px">
+    </div>
+
+    <div class="card text-center size position-absolute top-50 start-50 translate-middle p-3 mb-2 bg-transparent text-dark">
+        <div class="card-header" style="text-align: start;">
+            <button type="button" class="btn btn-danger" (click)="logout()">Logout</button>
+        </div>
+        <p-scrollPanel [style]="{width: '100%', height: '450px'}">
+            <div class="card-body">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col" *ngFor="let item of listPokemon.results;let index=index">
+                        <div class="btn card text-bg-dark h-100" (click)="routeDetailPokemon(index)">
+                            <img src="/assets/img/pokemon3.jpg" class="card-img">
+                            <div class="card-img-overlay">
+                                <h3 class="card-title text-center">{{item.name}}</h3>                                
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div> -->
-
-    
-
-
-    <div class="row row-cols-1 row-cols-md-2 g-4">
-        <div class="col" *ngFor="let item of listPokemon.results;let index=index">
-            <div class="card" >
-                <div class="card-body" >
-                    <h5 class="card-title">{{item.name}}</h5>
-                    <hr>
-                    <button type="button" class="btn btn-primary" (click)="routeDetailPokemon(index)">Ver</button>
-                    <div class="card-footer">Header</div>
-                </div>
-            </div>
-        </div>
+        </p-scrollPanel>
     </div>
 </body>

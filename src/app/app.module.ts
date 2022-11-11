@@ -14,6 +14,9 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ScrollTopModule } from 'primeng/scrolltop';
+import { ScrollPanelModule } from 'primeng/scrollpanel';
+
 
 @NgModule({
   declarations: [
@@ -30,6 +33,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ButtonModule,
     DataViewModule,
     ReactiveFormsModule,
+    ScrollTopModule,
+    ScrollPanelModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth())
   ],
