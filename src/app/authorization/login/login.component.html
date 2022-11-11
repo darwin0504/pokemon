@@ -1,0 +1,25 @@
+<body>
+    <div class="card border-warning mb-3 align">
+        <div class="card-body">
+            <h2 class="text-warning text">log In</h2>
+            <form [formGroup]="form">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" formControlName="email">
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" formControlName="password">
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-warning" id="liveToastBtn" (click)="logIn()">logIn</button>
+                </div>
+                <hr>
+                <div class="text">
+                    <button type="button" class="btn link-warning" (click)="inSignIn()">Create Account</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,30 @@
+<body>
+    <button type="button" class="btn btn-primary" (click)="logout()">Logout</button>
+    <!-- <div class="container">
+        <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 position-absolute top-50 start-50 translate-middle"
+            style="text-align: center;">
+            <div class="col" *ngFor="let item of listPokemon.results;let index=index">
+                <div class="p-3 border bg-light">{{item.name}}
+                    <hr>
+                    <button type="button" class="btn btn-primary" (click)="routeDetailPokemon(index)">Ver</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    
+
+
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col" *ngFor="let item of listPokemon.results;let index=index">
+            <div class="card" >
+                <div class="card-body" >
+                    <h5 class="card-title">{{item.name}}</h5>
+                    <hr>
+                    <button type="button" class="btn btn-primary" (click)="routeDetailPokemon(index)">Ver</button>
+                    <div class="card-footer">Header</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

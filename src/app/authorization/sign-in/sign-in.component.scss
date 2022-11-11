@@ -1,0 +1,18 @@
+.text {
+    text-align: center;
+}
+
+body {
+    background: url("/assets/img/pi.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 100vh;
+}
+
+.align {
+    width: 25rem;
+    position: relative;
+    left: 22rem;
+    top: 8rem;
+}

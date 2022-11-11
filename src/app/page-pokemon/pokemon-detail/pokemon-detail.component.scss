@@ -1,0 +1,28 @@
+body {
+    background: url("/assets/img/solidBlack.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 100vh;
+}
+
+.size {
+    width: 60%;
+    height: 60%;
+}
+
+.title {
+    position: relative;
+    text-align: center;
+    top: 100px;
+}
+
+.align {
+    text-align: center;
+}
+
+.alignButton {
+    position: relative;
+    top: 340px;
+    left: 50px;
+}

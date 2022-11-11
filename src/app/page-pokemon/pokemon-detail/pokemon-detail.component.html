@@ -1,0 +1,78 @@
+<body>
+    <div class="card mb-3 position-absolute top-50 start-50 translate-middle size p-3 mb-2 bg-warning text-dark">
+        <div class="row g-0">
+            <div class="col-md-4 position-absolute top-50 start-0 translate-middle-y"
+                style="text-align: center; position: relative;">
+                <img [src]="imgPokemon" class="img-fluid rounded-start" alt="">
+            </div>
+            <h1><strong>{{detailPokemon.name.toUpperCase()}}</strong></h1>
+            <div class="d-grid gap-2 d-md-block alignButton">
+                <button type="button" class="btn btn-danger position-absolute bottom-0 start-0"
+                    (click)="inPokemon()">View all Pokemons</button>
+            </div>
+            <div class="col-md-8 position-absolute top-50 end-0 translate-middle-y">
+                <div class="card-body">
+                    <img src="/src/assets/img/pokemon.jpg" alt="">
+                    <div class="list-group">
+                        <a class="list-group-item list-group-item-action p-3 mb-2 bg-transparent text-dark">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h2 class="mb-1">Abilities</h2>
+                            </div>
+                            <div class="container align">
+                                <div class="row">
+                                    <div class="col" *ngFor="let item of this.detailPokemon.abilities">
+                                        <h5>- {{item.ability.name}}</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="list-group-item list-group-item-action p-3 mb-2 bg-transparent text-dark">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h2 class="mb-1">Attributes</h2>
+                            </div>
+                            <div class="container align">
+                                <div class="row">
+                                    <div class="col">
+                                        <h4>Weight</h4>
+                                    </div>
+                                    <div class="col">
+                                        <h4>Height</h4>
+                                    </div>
+                                    <div class="col">
+                                        <h4>Experience</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container align">
+                                <div class="row">
+                                    <div class="col">
+                                        <h5>{{detailPokemon.weight}} kg</h5>
+                                    </div>
+                                    <div class="col">
+                                        <h5>{{detailPokemon.height}} m</h5>
+                                    </div>
+                                    <div class="col">
+                                        <h5>{{detailPokemon.base_experience}} xp</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="list-group-item list-group-item-action p-3 mb-2 bg-transparent text-dark">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h2 class="mb-1">Type</h2>
+                            </div>
+                            <div class="container align">
+                                <div class="row">
+                                    <div class="col" *ngFor="let item of detailPokemon.types">
+                                        <h5>- {{item.type.name}}</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <p style="text-align: center;">Pokemon #{{detailPokemon.id}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
